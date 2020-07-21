@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class ContactPickerActivity extends AppCompatActivity {
@@ -16,6 +17,19 @@ public class ContactPickerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_picker);
+
+        Button btn = findViewById(R.id.lifecycle);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startNewAcitity();
+            }
+        });
+    }
+
+    private void startNewAcitity() {
+        Intent intent = new Intent(this, LifecycleActivity.class);
+        startActivity(intent);
     }
 
     static final int REQUEST_SELECT_PHONE_NUMBER = 1;
