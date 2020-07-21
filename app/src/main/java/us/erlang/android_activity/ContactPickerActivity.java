@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class ContactPickerActivity extends AppCompatActivity {
@@ -43,7 +42,7 @@ public class ContactPickerActivity extends AppCompatActivity {
                 int nameIndex = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME);
                 String contactName = cursor.getString(nameIndex);
                 String contactPhone = cursor.getString(numberIndex);
-                Toast.makeText (this, contactName + " " + contactPhone, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, contactName + " " + contactPhone, Toast.LENGTH_LONG).show();
                 cursor.close();
             }
         }
