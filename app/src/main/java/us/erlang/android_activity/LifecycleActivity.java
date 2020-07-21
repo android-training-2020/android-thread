@@ -34,6 +34,12 @@ public class LifecycleActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        log("onStop");
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         log("onDestroy");
