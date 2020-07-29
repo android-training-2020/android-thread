@@ -5,15 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".ThreadActivity">
+    tools:context=".HandlerActivity">
 
     <Button
-        android:id="@+id/start_counter"
+        android:id="@+id/send_msg_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="@string/start_counter"
+        android:text="@string/message_a"
         android:textAllCaps="false"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_goneMarginBottom="20dp" />
+
+    <Button
+        android:id="@+id/send_msg_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/message_b"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/send_msg_1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

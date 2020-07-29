@@ -7,7 +7,7 @@
     android:paddingVertical="20dp">
 
     <Button
-        android:id="@+id/activate_thread_activity"
+        android:id="@+id/activate_handler_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
