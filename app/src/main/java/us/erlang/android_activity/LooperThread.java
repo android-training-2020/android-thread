@@ -3,6 +3,7 @@ package us.erlang.android_activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Message;
 
 public class LooperThread extends Thread {
     public Looper looper;
@@ -20,5 +21,10 @@ public class LooperThread extends Thread {
         this.looper = Looper.myLooper();
         this.handler = new TaskHandler(context);
         Looper.loop();
+    }
+
+    public void sendMessage(int msg) {
+        Message message = this.handler.obtainMessage(msg);
+        this.handler.sendMessage(message);
     }
 }

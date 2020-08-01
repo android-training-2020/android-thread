@@ -26,13 +26,13 @@ public class HandlerActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendMessage(CustomMessage.MESSAGE_TYPE_1);
+                looperThread.sendMessage(CustomMessage.MESSAGE_TYPE_1);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendMessage(CustomMessage.MESSAGE_TYPE_2);
+                looperThread.sendMessage(CustomMessage.MESSAGE_TYPE_2);
             }
         });
     }
@@ -41,10 +41,5 @@ public class HandlerActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         looperThread.looper.quit();
-    }
-
-    private void sendMessage(int messageType) {
-        Message message = looperThread.handler.obtainMessage(messageType);
-        looperThread.handler.sendMessage(message);
     }
 }
